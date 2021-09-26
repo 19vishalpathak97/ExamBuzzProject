@@ -1,0 +1,65 @@
+  
+	  $(document).ready(function() {
+	$("#uploadnotes").click(function() {
+		//Image validation start
+		var teachername=document.getElementById('teachername').value;//$('#txtfile').val();
+		var subject= document.getElementById('subject').value;//$('#txtfile').val();
+	    	var class= document.getElementById('class').value;//$('#txtfile').val();
+	  	var topic= document.getElementById('topic').value;//$('#txtfile').val();
+	  // 	var filename= document.getElementById('textfile').value;//$('#txtfile').val();
+
+	
+			//formdata object to send file upload data
+			var formData = new FormData();
+		  //  formData.append('fileupload',file_name);
+		     formData.append('fileupload',document.getElementById('textfile').files[0],file_name);
+		  
+		   
+			//var form1 = new FormData();
+            //form1.append('fi',$('.text').value);
+
+		   // formData.append('test_name',test);//$( '.txtFile' )[0].files[0], file_name);
+					//var dataString =  '&test='+ test;
+			 formData.append("teachername",teachername);
+			 
+			 formData.append("subject",subject);
+			 
+			 formData.append("class",class);
+			 
+			 formData.append("topic",topic);
+			  
+			 
+		//	 formData.append("filename",filename); 
+		    
+			/* for (var pair of formData.entries()) {
+				console.log(pair[0]+ ', ' + pair[1]); 
+				}*/
+		   
+		   
+		    
+		
+			
+			$.ajax({
+				type: 'POST',
+				url: 'up.php',
+				data: formData, 
+				 processData: false,
+				 contentType: false,
+				 
+				 success: function(data){
+				  alert(data);
+				  $("#load").hide();
+                  $("#load2").show();
+				  
+				  
+				 }
+			})
+		
+	
+	
+	  
+	
+		return false;
+	});
+	
+	

@@ -1,0 +1,90 @@
+
+
+.row{
+	width:80%;
+	margin-left:8%;
+}
+
+.column { 
+  width: 38%;
+  display: inline-flex;
+  margin-top:1em;
+  margin-right: 1.3em;
+}
+.typeImage{
+	width: 100%;
+}
+.card:hover {
+	background: #fff;
+	color:#000;
+}	
+
+.inside {
+	display:block;
+	padding:0;
+}
+
+@media screen and (max-width: 985px) {
+ 	
+ 	.column:nth-child(1){
+	margin-left: 4em;
+}
+ 	.column { 
+  width: 40%;
+  margin-left: 4em;
+  margin-top:2em;
+}
+}
+
+@media screen and (max-width: 650px) {
+ 	.column { 
+  width: 70%;
+  margin-top:1em;
+}
+.column:nth-child(1){
+	margin-left: 0;
+}
+.column{
+	margin:0em;
+}
+}
+@media screen and (max-width: 576px) {
+ 	.column { 
+  width: 100%;
+  margin-top:1em;
+}
+
+}
+.card {
+box-shadow: 0 0 10px 0 #a1a1a1;
+	border-radius:10px;
+	background-color:#fff;
+	transition:all 0.3s ease;
+    padding:0;
+    height: auto;
+	border-bottom: 3px solid transparent;
+	-moz-border-image: -moz-linear-gradient(45deg,  #ff512f,#dd2476);
+	-webkit-border-image: -webkit-linear-gradient(45deg,  #ff512f,#dd2476);
+	border-image: linear-gradient(45deg,  #833ab4,#fd1d1d,#fcb045);
+	border-image-slice: 1;
+	
+}
+.container {
+	width:70%;
+	padding:0;
+}
+.inside {
+	//display:flex;
+}
+.container::after, .row::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+
+.helper{
+    font-size:20px;
+    background:#a2dad7;
+    padding:0.5em;
+}

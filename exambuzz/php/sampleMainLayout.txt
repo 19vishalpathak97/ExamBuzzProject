@@ -1,0 +1,72 @@
+
+<!doctype html>
+<html lang="en-us">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/teachermodule.css" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+   <!-- <link rel="shortcut icon" href="favic.ico" />-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    	
+    
+    
+    <script>
+    	$(document).ready(function(){
+    		$("#user-img").click(function(){
+    			$(".content").slideToggle();
+    		});
+    	});
+
+    </script>
+  
+</head>
+    
+<title>
+    
+    
+</title>
+    
+<body>
+        <section class="top-navBar">
+            
+            <div class="logo">
+                <img src="img/small.png" width="75px" />
+            </div>
+
+           
+        	<div class="contentLeft">
+        		<center><img id="user-img" src="img/user-alt.svg" alt="user"></center>
+        		<div class="content">
+    			<div id="topUser">
+    				<img src="img/user-alt.svg" alt="user" width="35px">
+    				<div id="textArea">
+    				<p>nishit123@gmail.com</p>
+    				<a href="editProfile.html">View Profile</a>
+    				</div>
+    			</div>
+    			<input type="submit" value="Logout" id="logoutButt">
+    		</div>
+        	</div>
+    		
+    		
+        </section>
+
+        <section class="right">
+                <div class="work">
+                    <button class="inWork">
+                        <a href="Login.html">Home&nbsp;<img src="img/home.png" width="30px" /></a>
+                    </button><br/>
+                    <button class="inWork">
+                        <a href="#">About Us&nbsp;<img src="img/user-alt.png" width="30px" /></a>
+                    </button><br/>
+                </div>
+
+        </section>
+
+       
+</body>
+</html>
+
+

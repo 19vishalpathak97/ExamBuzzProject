@@ -1,0 +1,35 @@
+
+
+.left.availableTest{
+	margin-top: 2em;
+    width:auto;
+}
+.labelsTest{
+	margin: 2em;
+	background: #a2dad7;
+	padding: 0.1em;
+	border-radius: 10px;
+}
+.labelsTest h3{
+	margin-left: 3em;
+}
+.innerModule{
+    margin-top:1em;
+}
+.labelsTest p{
+	margin-left: 3em;
+}
+input[type="submit"]{
+	background: #009688;
+	border: transparent;
+	padding-left: 0.5em;
+	padding-right: 0.5em;
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+}
+
+
+
+
+
+

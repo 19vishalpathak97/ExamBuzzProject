@@ -1,0 +1,25 @@
+.studentPerformance{
+	clear: both;
+	margin-top: 2em;
+	//padding: 1em;
+}
+.studentPerformance table{
+	width: 100%;
+	border: 2px solid #009688;
+}
+.studentPerformance table tr:nth-child(even){
+	background: #73c8c1;
+}
+.studentPerformance table tr{
+	padding: 0.5em;
+}
+.studentPerformance table tr td{
+	padding: 0.5em;
+	text-align: center;
+}
+#cancel{
+	margin-top: 1em;
+}
+
+
+

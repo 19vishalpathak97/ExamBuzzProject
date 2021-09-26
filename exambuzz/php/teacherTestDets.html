@@ -1,0 +1,165 @@
+
+<!doctype html>
+<html lang="en-us">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/teachermodule.css" />
+    <link rel="stylesheet" href="css/teacherTestDets.css" />
+    <link rel="icon" href="/exambuzz/img/small.png" type="image/gif" sizes="16x16">
+    	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+   <!-- <link rel="shortcut icon" href="favic.ico" />-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    	
+    
+    
+    <script>
+    	$(document).ready(function(){
+    		$("#user-img").click(function(){
+    			$(".content").slideToggle();
+    		});
+    	});
+
+    </script>
+
+
+
+<!-- Resources -->
+<script src="https://www.amcharts.com/lib/4/core.js"></script>
+<script src="https://www.amcharts.com/lib/4/charts.js"></script>
+<script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+
+<!-- Chart code -->
+ <link rel="stylesheet" href="../css/noSelect.css">
+    <script src="../keyDisable.js"></script>
+  
+</head>
+    
+<title>
+    Exambuzz
+    
+</title>
+    
+<body class="noselect" ondragstart="return false;" oncontextmenu="return false;">
+        <section class="top-navBar">
+            
+            <div class="logo">
+                <img src="img/small.png" width="75px" />
+            </div>
+
+           
+        	<div class="contentLeft">
+        		<center><img id="user-img" src="img/user-alt.svg" alt="user"></center>
+        		<div class="content">
+    			<div id="topUser">
+    				<img src="img/user-alt.svg" alt="user" width="35px">
+    				<div id="textArea">
+    				<p>nishit123@gmail.com</p>
+    				<a href="editProfile.html">View Profile</a>
+    				</div>
+    			</div>
+    			<input type="submit" value="Logout" id="logoutButt">
+    		</div>
+        	</div>
+    		
+    		
+        </section>
+
+        <section class="right">
+                <div class="work">
+                    <button class="inWork">
+                        <a href="Login.html">Home&nbsp;<img src="img/home.png" width="30px" /></a>
+                    </button><br/>
+                    <button class="inWork">
+                        <a href="#">About Us&nbsp;<img src="img/user-alt.png" width="30px" /></a>
+                    </button><br/>
+                </div>
+
+        </section>
+
+        <section class="left">
+
+                <h1>Subject Test Details</h1>
+
+                <div id="chartdiv"></div>
+
+               <center> <div class="studentPerformance">
+                    <table>
+                        <tr>
+                            <td style="border-bottom: 2px solid #009688;">Student Name</td>
+                            <td  style="border-bottom: 2px solid #009688;">Marks Obtained</td>
+                            <td  style="border-bottom: 2px solid #009688;">Incorrect Answers</td>
+                        </tr>
+
+                        <tr>
+                            <td>FR()$TY</td>
+                            <td>100</td>
+                            <td>0</td>
+                        </tr>
+                        <tr>
+                            <td>DEAD$#OT</td>
+                            <td>60</td>
+                            <td>4</td>
+                        </tr>
+                        <tr>
+                            <td>QW!K</td>
+                            <td>80</td>
+                            <td>2</td>
+                        </tr>
+
+                        <tr>
+                            <td>PUN!$#ER</td>
+                            <td>70</td>
+                            <td>3</td>
+                        </tr>
+                    </table>
+
+                </div></center>
+
+        </section>
+
+       
+</body>
+<script>
+// Themes begin
+am4core.useTheme(am4themes_animated);
+// Themes end
+
+// Create chart instance
+var chart = am4core.create("chartdiv", am4charts.PieChart);
+
+// Add data
+chart.data = [ {
+  "subject": "Quantative",
+  "marks": 15
+}, {
+  "subject": "Logical",
+  "marks": 25
+}, {
+  "subject": "Verbal",
+  "marks": 10
+}, {
+  "subject": "Coding",
+  "marks": 20
+}, {
+  "subject": "English",
+  "marks": 30
+}];
+
+// Add and configure Series
+var pieSeries = chart.series.push(new am4charts.PieSeries());
+pieSeries.dataFields.value = "marks";
+pieSeries.dataFields.category = "subject";
+pieSeries.slices.template.stroke = am4core.color("#fff");
+pieSeries.slices.template.strokeWidth = 2;
+pieSeries.slices.template.strokeOpacity = 1;
+
+// This creates initial animation
+pieSeries.hiddenState.properties.opacity = 1;
+pieSeries.hiddenState.properties.endAngle = -90;
+pieSeries.hiddenState.properties.startAngle = -90;
+</script>
+</html>
+
+

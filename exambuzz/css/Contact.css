@@ -1,0 +1,15 @@
+
+.bottomPart p{
+	text-align: center;
+	color: #2e7482;
+	font-size: 22px;
+}
+.bottomPart h1{
+    text-align:center;
+    font-size:40px;
+}
+
+.inside h1,.inside h3{
+	line-height: 0px;
+	color: #009688;
+}
